@@ -1,0 +1,11 @@
+---
+#
+# Top configuration file to use with Vagrant. Defines all the roles of you vagrant VM.
+# This file is referenced from Vagrantfile.
+#
+
+- hosts: all
+  vars_files:
+    - defaults/main.yml
+  tasks:
+    - include: tasks/main.yml

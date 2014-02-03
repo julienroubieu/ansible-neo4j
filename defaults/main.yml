@@ -1,0 +1,4 @@
+---
+
+neo4j_enterprise_version: 2.0.0
+neo4j_graphdb_location: data/graph.db
