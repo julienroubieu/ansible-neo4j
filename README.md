@@ -60,13 +60,13 @@ To use this role in your playbook, the simplest is (using default configuration)
 
     - hosts: neo4j_servers
       roles:
-         - jroubieu.neo4j
+         - julienroubieu.neo4j
 
 If you want to override some variable:
 
     - hosts: neo4j_servers
       roles:
-         - { role: jroubieu.neo4j, neo4j_server_webserver_port: 8080 }
+         - { role: julienroubieu.neo4j, neo4j_server_webserver_port: 8080 }
 
 
 Vagrant
