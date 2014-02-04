@@ -14,7 +14,10 @@
   apt_repository: repo="deb http://debian.neo4j.org/repo stable/" state=present update_cache=yes
 
 - name: Check Neo4j enterprise is installed
-  apt: pkg=neo4j-enterprise={{ neo4j_enterprise_version }} state=present
+  apt: pkg={{ neo4j_package }}={{ neo4j_package_version }} state=present
+
+- name: Ensure graph DB folder exists
+  file: path={{ neo4j_server_database_location }} state=directory owner=neo4j group=adm mode=0755
 
 - name: Configure Neo4j server properties
   template: src=neo4j-server.properties  dest=/etc/neo4j/neo4j-server.properties owner=neo4j group=adm mode=0644
