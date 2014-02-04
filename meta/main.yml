@@ -1,9 +1,9 @@
 ---
 galaxy_info:
   author: Julien Roubieu
-  description: Neo4j Enterprise
+  description: Neo4j
   company: Selvz LLC
-  license: GPLv2
+  license: BSD
   min_ansible_version: 1.4
   platforms:
     - name: Ubuntu
@@ -13,4 +13,4 @@ galaxy_info:
     - database
     - database:nosql
 dependencies:
-  - { role: oracle7-java }
+  - { role: briancoca.oracle7-java }

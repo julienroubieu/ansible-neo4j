@@ -13,7 +13,7 @@
 - name: Setup Neo4j repository
   apt_repository: repo="deb http://debian.neo4j.org/repo stable/" state=present update_cache=yes
 
-- name: Check Neo4j enterprise is installed
+- name: Check Neo4j package is installed
   apt: pkg={{ neo4j_package }}={{ neo4j_package_version }} state=present
 
 - name: Ensure graph DB folder exists

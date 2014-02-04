@@ -10,12 +10,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
   # Create a forwarded port mapping which allows access to a specific port
-  # within the machine from a port on the host machine. In the example below,
-  # accessing "localhost:8080" will access port 80 on the guest machine.
+  # within the machine from a port on the host machine.
+  # 7474 is the default Neo4j port. The port here must be the same as the one in vars/vagrant.yml
   config.vm.network :forwarded_port, guest: 7474, host: 7474
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
+  # The IP here should be the same as in vagrant_host
   config.vm.network :private_network, ip: "10.0.0.74"
   
   config.vm.provision "ansible" do |ansible|
