@@ -4,7 +4,7 @@ galaxy_info:
   description: Neo4j
   company: Selvz LLC
   license: BSD
-  min_ansible_version: 1.4
+  min_ansible_version: 1.6
   platforms:
     - name: Ubuntu
       versions:
@@ -13,4 +13,4 @@ galaxy_info:
     - database
     - database:nosql
 dependencies:
-  - { role: briancoca.oracle7-java }
+  - { role: briancoca.oracle_java7 }
