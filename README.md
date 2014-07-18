@@ -51,7 +51,7 @@ Except for the first 2 that specify which package to install, all of them are co
 Dependencies
 ------------
 
-* [briancoca.oracle7-java](https://galaxy.ansible.com/list#/roles/233) to use Oracle Java 7
+* [briancoca.oracle_java7](https://galaxy.ansible.com/list#/roles/628) to use Oracle Java 7
 
 Example Playbook
 -------------------------
@@ -77,7 +77,7 @@ This project is also integrated with Vagrant. You can use Vagrant to create a lo
 To do this:
 
 * Install Vagrant from [http://www.vagrantup.com](http://www.vagrantup.com/downloads.html)
-* Run `vagrant up` to turn the VM on and automatically run the vagrant.yml playbook. 
+* Run `vagrant up` to turn the VM on and automatically run the vagrant.yml playbook.
 * To run it again, 2 solutions:
   * From vagrant: `vagrant provision`
   * From ansible directly: `ansible-playbook -s -i vagrant_host vagrant.yml -vv`
