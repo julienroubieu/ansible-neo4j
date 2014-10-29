@@ -20,15 +20,15 @@
   file: path={{ neo4j_server_database_location }} state=directory owner=neo4j group=adm mode=0755
 
 - name: Configure Neo4j server properties
-  template: src=neo4j-server.properties  dest=/etc/neo4j/neo4j-server.properties owner=neo4j group=adm mode=0644
+  template: src=neo4j-server.properties  dest=/var/lib/neo4j/conf/neo4j-server.properties owner=neo4j group=adm mode=0644
   notify: Restart neo4j
 
 - name: Configure Neo4j server wrapper properties
-  template: src=neo4j-wrapper.conf dest=/etc/neo4j/neo4j-wrapper.conf owner=neo4j group=adm mode=0644
+  template: src=neo4j-wrapper.conf dest=/var/lib/neo4j/conf/neo4j-wrapper.conf owner=neo4j group=adm mode=0644
   notify: Restart neo4j
 
 - name: Configure Neo4j properties
-  template: src=neo4j.properties dest=/etc/neo4j/neo4j.properties owner=neo4j group=adm mode=0644
+  template: src=neo4j.properties dest=/var/lib/neo4j/conf/neo4j.properties owner=neo4j group=adm mode=0644
   notify: Restart neo4j
 
 - name: Ensure open files soft limit is set
