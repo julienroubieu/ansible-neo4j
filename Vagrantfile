@@ -24,6 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ansible.inventory_path = "vagrant_host"
     ansible.sudo = true
     ansible.verbose = "vv"
+    ansible.limit = "all"
   end
 
 end
